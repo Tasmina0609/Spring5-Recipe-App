@@ -42,9 +42,6 @@ public class Recipe {
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "recipe")  // mappedBy - removing the parent should also remove the child entities
     private Set<Ingredient> ingredients=new HashSet<>();
 
-
-
-
     public void setNotes(Notes notes) {
         this.notes = notes;
         notes.setRecipe(this);  // build association
